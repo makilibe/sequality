@@ -4,11 +4,52 @@
 package sequality;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+  public String getGreeting() {
+    return "Hello World!";
+  }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+  public int sum(int a, int b) {
+    int calc = Calculate.sum(a, b);
+    return calc;
+  }
+
+  public double ave(double a, double b) {
+    double calc = Calculate.ave(a, b);
+    return calc;
+  }
+
+  public int allsum(int a, int b) {
+    int calc = 0;
+    for (int i = a; i <= b; i++) {
+      calc = calc + i;
     }
+    return calc;
+  }
+
+  public int oddsum(int a, int b) {
+    int odd = 0;
+    for (int i = a; i <= b; i++) {
+      if(i % 2 != 0){
+        odd += i;
+      }
+    }
+    return odd;
+  }
+
+  public int evensum(int a, int b) {
+    int even = 0;
+    for (int i = a; i <= b; i++) {
+      if(i % 2 == 0){
+        even += i;
+      }
+    }
+    return even;
+  }
+
+  public static void main(String[] args) {
+    System.out.println(new App().getGreeting());
+    System.out.println("Sum of 2 and 3 is " + new App().sum(2, 3) + ".Average is " + new App().ave(new App().sum(2, 3), 2) + ".");
+    System.out.println("Sum of 1 to 10 is " + new App().allsum(1, 10) + ".Average is " + new App().ave(new App().allsum(1, 10), 2) + ".");
+    System.out.println("Sum of odd of 1 to 10 is " + new App().oddsum(1, 10) + ". Sum of even is " + new App().evensum(1, 10) + ".");
+  }
 }

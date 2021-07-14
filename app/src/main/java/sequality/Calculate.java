@@ -1,7 +1,13 @@
 package sequality;
 
 public class Calculate {
-  public int sum(int x, int y) {
+  public static int sum(int x, int y) {
     return x + y;
   }
+
+  public static double ave(double a, double b) {
+    return a / b;
+  }
+
+
 }
