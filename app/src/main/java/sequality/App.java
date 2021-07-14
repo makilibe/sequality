@@ -8,48 +8,20 @@ public class App {
     return "Hello World!";
   }
 
-  public int sum(int a, int b) {
-    int calc = Calculate.sum(a, b);
-    return calc;
-  }
 
-  public double ave(double a, double b) {
-    double calc = Calculate.ave(a, b);
-    return calc;
-  }
-
-  public int allsum(int a, int b) {
-    int calc = 0;
-    for (int i = a; i <= b; i++) {
-      calc = calc + i;
-    }
-    return calc;
-  }
-
-  public int oddsum(int a, int b) {
-    int odd = 0;
-    for (int i = a; i <= b; i++) {
-      if(i % 2 != 0){
-        odd += i;
-      }
-    }
-    return odd;
-  }
-
-  public int evensum(int a, int b) {
-    int even = 0;
-    for (int i = a; i <= b; i++) {
-      if(i % 2 == 0){
-        even += i;
-      }
-    }
-    return even;
-  }
 
   public static void main(String[] args) {
+    int x = 2;
+    int y = 3;
+    int i = 1;
+    int j = 10;
     System.out.println(new App().getGreeting());
-    System.out.println("Sum of 2 and 3 is " + new App().sum(2, 3) + ".Average is " + new App().ave(new App().sum(2, 3), 2) + ".");
-    System.out.println("Sum of 1 to 10 is " + new App().allsum(1, 10) + ".Average is " + new App().ave(new App().allsum(1, 10), 2) + ".");
-    System.out.println("Sum of odd of 1 to 10 is " + new App().oddsum(1, 10) + ". Sum of even is " + new App().evensum(1, 10) + ".");
+    Calculate calc = new Calculate();
+    System.out
+        .println("Sum of " + x + " and " + y + " is " + calc.sum(x, y) + "." + "Average is " + calc.ave(x, y) + ".");
+    System.out.println(
+        "Sum of " + i + " and " + j + " is " + calc.allsum(i, j) + "." + "Average is " + calc.sumave(i, j) + ".");
+    System.out.println("Sum of odd of " + i + " to " + j + " is " + calc.sumodd(i, j) + "." + "Sum of even is "
+        + calc.sumeven(i, j) + ".");
   }
 }
