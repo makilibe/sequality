@@ -23,20 +23,20 @@ public class AppTest {
   public void testallsum() {
     App classUnderTest = new App();
     double expected = 55;
-    assertEquals(expected, allsum(1, 10));
+    assertEquals(expected, App.allsum(1, 10));
   }
 
   @Test
   public void oddsum() {
     App classUnderTest = new App();
     double expected = 10;
-    assertEquals(expected, oddsum(1, 10) );
+    assertEquals(expected, App.oddsum(1, 10) );
   }
 
   @Test
   public void oddsum() {
     App classUnderTest = new App();
     double expected = 30;
-    assertEquals(expected, evensum(1, 10) );
+    assertEquals(expected, App.evensum(1, 10) );
   }
 }
